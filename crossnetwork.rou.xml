@@ -1,0 +1,110 @@
+<routes>
+
+    <!-- Vehicle type used for all generated traffic -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="25"/>
+
+    <!-- ===================== -->
+    <!-- ROUTE DEFINITIONS -->
+    <!-- ===================== -->
+
+    <!-- From LEFT (west approach) -->
+    <route id="L_straight" edges="1i 2o"/>   <!-- West -> East -->
+    <route id="L_left"     edges="1i 4o"/>   <!-- West -> North -->
+    <route id="L_right"    edges="1i 3o"/>   <!-- West -> South -->
+
+    <!-- From RIGHT (east approach) -->
+    <route id="R_straight" edges="2i 1o"/>   <!-- East -> West -->
+    <route id="R_left"     edges="2i 3o"/>   <!-- East -> South -->
+    <route id="R_right"    edges="2i 4o"/>   <!-- East -> North -->
+
+    <!-- From BOTTOM (south approach) -->
+    <route id="B_straight" edges="3i 4o"/>   <!-- South -> North -->
+    <route id="B_left"     edges="3i 1o"/>   <!-- South -> West -->
+    <route id="B_right"    edges="3i 2o"/>   <!-- South -> East -->
+
+    <!-- From TOP (north approach) -->
+    <route id="T_straight" edges="4i 3o"/>   <!-- North -> South -->
+    <route id="T_left"     edges="4i 2o"/>   <!-- North -> East -->
+    <route id="T_right"    edges="4i 1o"/>   <!-- North -> West -->
+
+
+    <!-- ===================== -->
+    <!-- HOUR 1: MORNING PEAK -->
+    <!-- 0 to 3600 seconds -->
+    <!-- ===================== -->
+
+    <!-- North approach -->
+    <flow id="T_AM_straight" type="car" route="T_straight" begin="0" end="3600" vehsPerHour="1300"/>
+    <flow id="T_AM_left"     type="car" route="T_left"     begin="0" end="3600" vehsPerHour="180"/>
+    <flow id="T_AM_right"    type="car" route="T_right"    begin="0" end="3600" vehsPerHour="220"/>
+
+    <!-- South approach -->
+    <flow id="B_AM_straight" type="car" route="B_straight" begin="0" end="3600" vehsPerHour="1150"/>
+    <flow id="B_AM_left"     type="car" route="B_left"     begin="0" end="3600" vehsPerHour="160"/>
+    <flow id="B_AM_right"    type="car" route="B_right"    begin="0" end="3600" vehsPerHour="210"/>
+
+    <!-- West approach -->
+    <flow id="L_AM_straight" type="car" route="L_straight" begin="0" end="3600" vehsPerHour="420"/>
+    <flow id="L_AM_left"     type="car" route="L_left"     begin="0" end="3600" vehsPerHour="70"/>
+    <flow id="L_AM_right"    type="car" route="L_right"    begin="0" end="3600" vehsPerHour="110"/>
+
+    <!-- East approach -->
+    <flow id="R_AM_straight" type="car" route="R_straight" begin="0" end="3600" vehsPerHour="380"/>
+    <flow id="R_AM_left"     type="car" route="R_left"     begin="0" end="3600" vehsPerHour="60"/>
+    <flow id="R_AM_right"    type="car" route="R_right"    begin="0" end="3600" vehsPerHour="100"/>
+
+
+    <!-- ===================== -->
+    <!-- HOUR 2: MIDDAY -->
+    <!-- 3600 to 7200 seconds -->
+    <!-- Lower than main peak -->
+    <!-- ===================== -->
+
+    <!-- North approach -->
+    <flow id="T_MD_straight" type="car" route="T_straight" begin="3600" end="7200" vehsPerHour="900"/>
+    <flow id="T_MD_left"     type="car" route="T_left"     begin="3600" end="7200" vehsPerHour="140"/>
+    <flow id="T_MD_right"    type="car" route="T_right"    begin="3600" end="7200" vehsPerHour="170"/>
+
+    <!-- South approach -->
+    <flow id="B_MD_straight" type="car" route="B_straight" begin="3600" end="7200" vehsPerHour="850"/>
+    <flow id="B_MD_left"     type="car" route="B_left"     begin="3600" end="7200" vehsPerHour="130"/>
+    <flow id="B_MD_right"    type="car" route="B_right"    begin="3600" end="7200" vehsPerHour="160"/>
+
+    <!-- West approach -->
+    <flow id="L_MD_straight" type="car" route="L_straight" begin="3600" end="7200" vehsPerHour="500"/>
+    <flow id="L_MD_left"     type="car" route="L_left"     begin="3600" end="7200" vehsPerHour="90"/>
+    <flow id="L_MD_right"    type="car" route="L_right"    begin="3600" end="7200" vehsPerHour="130"/>
+
+    <!-- East approach -->
+    <flow id="R_MD_straight" type="car" route="R_straight" begin="3600" end="7200" vehsPerHour="470"/>
+    <flow id="R_MD_left"     type="car" route="R_left"     begin="3600" end="7200" vehsPerHour="85"/>
+    <flow id="R_MD_right"    type="car" route="R_right"    begin="3600" end="7200" vehsPerHour="125"/>
+
+
+    <!-- ===================== -->
+    <!-- HOUR 3: EVENING PEAK -->
+    <!-- 7200 to 10800 seconds -->
+    <!-- Usually strongest -->
+    <!-- ===================== -->
+
+    <!-- North approach -->
+    <flow id="T_PM_straight" type="car" route="T_straight" begin="7200" end="10800" vehsPerHour="1700"/>
+    <flow id="T_PM_left"     type="car" route="T_left"     begin="7200" end="10800" vehsPerHour="250"/>
+    <flow id="T_PM_right"    type="car" route="T_right"    begin="7200" end="10800" vehsPerHour="280"/>
+
+    <!-- South approach -->
+    <flow id="B_PM_straight" type="car" route="B_straight" begin="7200" end="10800" vehsPerHour="1600"/>
+    <flow id="B_PM_left"     type="car" route="B_left"     begin="7200" end="10800" vehsPerHour="230"/>
+    <flow id="B_PM_right"    type="car" route="B_right"    begin="7200" end="10800" vehsPerHour="260"/>
+
+    <!-- West approach -->
+    <flow id="L_PM_straight" type="car" route="L_straight" begin="7200" end="10800" vehsPerHour="650"/>
+    <flow id="L_PM_left"     type="car" route="L_left"     begin="7200" end="10800" vehsPerHour="110"/>
+    <flow id="L_PM_right"    type="car" route="L_right"    begin="7200" end="10800" vehsPerHour="150"/>
+
+    <!-- East approach -->
+    <flow id="R_PM_straight" type="car" route="R_straight" begin="7200" end="10800" vehsPerHour="620"/>
+    <flow id="R_PM_left"     type="car" route="R_left"     begin="7200" end="10800" vehsPerHour="100"/>
+    <flow id="R_PM_right"    type="car" route="R_right"    begin="7200" end="10800" vehsPerHour="145"/>
+
+</routes>

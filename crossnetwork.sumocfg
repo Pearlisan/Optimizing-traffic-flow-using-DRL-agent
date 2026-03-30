@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="crossnetwork.net.xml"/>
+        <route-files value="crossnetwork.rou.xml"/>
+    </input>
+	<time>
+        <begin value="0"/>
+        <end value="10800"/>
+    </time>
+</configuration>

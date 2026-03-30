@@ -1,0 +1,39 @@
+sumo1:
+  net_file: dataset/net/net_single2.net.xml
+  route_dir: dataset/rou/net_single2/c1
+
+  replay_memory_size: 50000
+  mini_batch_size: 64
+
+  epsilon_init: 1.0
+  epsilon_decay: 0.997
+  epsilon_min: 0.1
+
+  network_sync_rate: 1000
+  learning_rate_a: 0.0001
+  discount_factor_g: 0.99
+
+  stop_on_reward: 100000
+  fc1_nodes: 128
+
+  num_episodes: 840
+  num_seconds: 1200
+  delta_time: 5
+  yellow_time: 3
+  min_green: 10
+
+  use_gui: False
+  sumo_warnings: True
+  additional_sumo_cmd: "--delay 100"
+  reward_fn: "pressure"
+  reward_weights: null
+  clearance_extra_seconds: 600
+  terminal_remaining_penalty: 25.0
+  overtime_step_penalty: 1.0
+  no_progress_patience_seconds: 600
+
+  early_stop_patience: 3
+  validation_interval: 50
+  validation_routes_count: 5
+
+  random_seed: 42

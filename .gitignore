@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment created inside the project
+Include/
+Lib/
+Scripts/
+share/
+pyvenv.cfg
+
+# Local git metadata
+.git/
+
+# Training outputs and experiment artifacts
+runs/
+runs copy/
+dataset/
+*.pt
+
+# OS/editor noise
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+<configuration>
+	<input>
+		 <node-files value="crossnetwork.nod.xml"/>
+		 <edge-files value="crossnetwork.edg.xml"/>
+		 <connection-files value="crossnetwork.con.xml"/>
+	</input>
+	<output>
+		<output-file value="crossnetwork.net.xml"/>
+	</output>
+	<report>
+		 <verbose value="true"/>
+	</report>
+</configuration>
